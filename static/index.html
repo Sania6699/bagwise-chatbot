@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BagWise</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+
+  <aside class="side" id="side">
+    <div class="side-top">
+      <div class="logo"><span class="logo-mark">B</span>BagWise</div>
+      <button class="newbtn" id="newChat">+ New chat</button>
+    </div>
+    <div class="hlabel">Recent</div>
+    <nav class="hist" id="hist"></nav>
+    <div class="settings">
+      <div class="flabel">Search mode</div>
+      <div class="seg" id="seg">
+        <button data-s="auto">Auto</button>
+        <button data-s="semantic">Meaning</button>
+        <button data-s="keyword">Exact</button>
+        <button data-s="hybrid">Hybrid</button>
+      </div>
+      <div class="row-set"><span>Show how answers are made</span><input type="checkbox" id="showHow"></div>
+      <button class="ghost" id="theme">Switch light / dark</button>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <section class="chat" id="chat">
+    <header>
+      <button class="icon" id="menu" aria-label="Menu">&#9776;</button>
+      <div class="title" id="title"></div>
+    </header>
+    <main id="main"><div class="thread" id="thread"></div></main>
+    <button id="toBottom" aria-label="Scroll to latest">&#8595;</button>
+    <div class="composer">
+      <form id="form">
+        <textarea id="q" rows="1" placeholder="Ask about baggage rules"></textarea>
+        <button class="send" id="send" type="submit" aria-label="Send"></button>
+      </form>
+      <div class="disc">Demo with sample documents and illustrative figures. Not official airline policy.</div>
+    </div>
+  </section>
+
+  <aside class="drawer" id="drawer">
+    <div class="dpanel">
+      <div class="dhead"><b>Source passage</b><button class="dclose" id="dclose" aria-label="Close">&#215;</button></div>
+      <div class="dcard">
+        <div class="dtitle"><span class="n" id="dNum"></span><span id="dTitle"></span></div>
+        <div class="dfile" id="dFile"></div>
+        <div class="dtext" id="dText"></div>
+        <div class="dnote">This is the exact text the answer was written from.</div>
+      </div>
+    </div>
+  </aside>
+</div>
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
